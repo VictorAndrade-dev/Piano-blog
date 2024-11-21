@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* O cursor customizado */
+body {
+    cursor: none; /* Desativa o cursor padrão */
+}
+
+.rastro-cursor {
+    position: fixed; /* Corrige o comportamento na página inteira */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff5733; /* Cor inicial */
+    pointer-events: none; /* Não interfere na interação com outros elementos */
+    transform: translate(-50%, -50%); /* Centraliza no mouse */
+    transition: transform 0.1s ease; /* Suaviza o movimento */
+}
+
+/* Efeito de mudança de cor para o rastro */
+body.modo-escuro .rastro-cursor {
+    background-color: #00ffcc; /* Cor do rastro no modo escuro */
+}
+
+body {
+    background-color:  #f0e6dbf6;
+    border: 4px solid #4A4A4A;
+    border-top: 0px;
+    color: #333; /*cor do texto no modo claro*/
+    transition: background-color 0.3 easer, color 0.3 ease;
+}
+
+/*estilos do modo escuro */
+body.modo-escuro {
+    background-color: #1d1d1d;
+    color: #f0f0f0;
+}
+
+img {
+    border-radius: 1rem;
+    box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.267);
+}
+
+nav {
+    display: flex;    
+    flex-direction: column;
+    background-color: #f5f4f2;
+    height: auto;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: 3px solid #4A4A4A;
+    padding: 1rem 0 1rem;
+    font-family: 'Brandon Grotesque', sans-serif;
+    box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.267);
+    transition: background-color 0.3 ease, border-color 0.3s ease;
+}
+
+/* Estilos do modo escuro para o nav */
+body.modo-escuro nav {
+    background-color: #333; /* Fundo do menu no modo escuro */
+    border-color: #444; /* Cor da borda no modo escuro */
+}
+
+nav h1 {
+    padding-left: 5rem;
+}
+
+nav h1 a {
+    text-decoration: none;
+    font-size: 2.2rem;
+    color:  #D4AF37; /*talvez essa cor vire #c08d2fe5; */ /*cor anterior escura: #8f723be5; */
+}
+
+body.modo-escuro nav h1 a {
+    color: #23f1e0; /* Título no modo escuro */
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #8f723be5;
+    font-weight: bold;
+}
+
+/* Estilos do modo escuro para links */
+body.modo-escuro nav ul li a {
+    color: #ffffff; /* Links no modo escuro */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    
+}
+
+nav ul li {
+    display: flex;
+    padding: 0.9rem 1rem 0 1rem;
+    position: relative;
+} 
+
+
+nav ul li::after {
+    text-decoration: none;
+    content: '';
+    position: absolute;
+    bottom: 0rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color:  #b16846; /*cor vermelha anterior : #800000 */
+    transition: all 300ms ease-in-out;
+}
+
+body.modo-escuro nav ul li::after {
+    background-color: #7efbff; /* Underline branco no modo escuro */
+}
+
+nav ul li:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+
+#fundoMusical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#imagem-piano {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    margin: 2rem;
+} 
+
+#piano-real {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    margin: 5rem 0 5rem;
+}
+
+#teclado-pc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#beethoven {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#Undertale {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#Snowfall {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+section {
+    font-size: 1.1rem;
+    margin: 3rem auto 3rem auto;
+    border: 2px solid #B8860B;
+    border-radius: 2rem;
+    padding:20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; ;	
+    color: #654321;
+    background-color:  #fcfcfc;
+    box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.267);
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Estilos do modo escuro para as seções */
+body.modo-escuro section {
+    background-color: #000000; /* Fundo das seções */
+    color: #f7f7f7; /* Texto das seções */
+    border-color: #B8860B; /* Cor da borda das seções */
+}
+
+section h1 {
+    font-size: 1.9rem;
+    color:   #800000; /*talvez troque para essa cor #c02f9ce5; ou essa: #b16846 */
+}
+
+body.modo-escuro section h1 {
+    color: #3fd4da; /* Cor do título das seções no modo escuro */
+}
+
+section h2 {
+    font-size: 1.7rem;
+    color: rgb(122, 116, 214);
+}
+
+/* Estilos do modo escuro para h2 */
+body.modo-escuro section h2 {
+    color: rgb(171, 171, 214); /* Cor mais clara para h2 no modo escuro */
+}
+
+main {
+    max-width:70rem;
+    margin: auto;
+}
+
+aside {
+    height:630px;
+    width:150px;
+    background-color:#eeeeee;
+    float:right;
+    padding:5px;	 	 
+}
+
+/* Estilos do modo escuro para o aside */
+body.modo-escuro aside {
+    background-color: #444; /* Fundo escuro para o aside */
+}
+
+footer {
+    width: 100%;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    padding: 4rem;
+    margin-top: auto;
+}
+
+body.modo-escuro footer {
+    background-color: #111; /* Fundo do footer no modo escuro */
+}
+
+@media (max-width: 768px) {
+    nav {   
+        flex-direction: column;
+        height: 12rem;
+        padding-top: 3rem;
+     
+    }
+    nav h1 {
+        font-size: 6rem;
+    }
+    nav ul {
+        margin-top: 1rem;
+        height: 1rem;
+        justify-content: center;
+        align-items: center;
+    }   
+    
+    nav ul li {
+        padding: 0 1rem 0 1rem;
+    } 
+}
